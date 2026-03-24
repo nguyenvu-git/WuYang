@@ -1,0 +1,10 @@
+@import "tailwindcss";
+/* Phải nằm ở dòng đầu tiên của file index.css hoặc App.css */
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&display=swap");
+@font-face {
+  font-family: "Gang of Three";
+  src: url("https://fonts.cdnfonts.com/s/14101/GangOfThree.woff") format("woff");
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
