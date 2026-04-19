@@ -3,13 +3,13 @@ import React from "react";
 import { NavLink, useNavigate, Link } from "react-router-dom";
 import {
   BarChart3,
+  FileText,
+  MessageSquare,
   ListChecks,
   Users,
   Package,
-  LogOut,
-  Settings,
-  MessageSquare,
-  FileText
+  Grid,
+  LogOut
 } from "lucide-react";
 
 const AdminSidebarItem = ({ icon: Icon, label, to, isOpen, end = false }) => {
@@ -118,6 +118,12 @@ const AdminSidebar = ({ isOpen, toggleSidebar }) => {
             icon={ListChecks}
             label="Thực đơn"
             to="/admin/menu"
+            isOpen={isOpen}
+          />
+          <AdminSidebarItem
+            icon={Grid}
+            label="Sơ đồ Bàn"
+            to="/admin/tables"
             isOpen={isOpen}
           />
           <AdminSidebarItem

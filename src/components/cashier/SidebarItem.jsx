@@ -83,6 +83,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             isOpen={isOpen}
           />
           <SidebarItem
+            to="/cashier/bookings"
+            icon={<Users size={22} />}
+            label="Đặt bàn"
+            isOpen={isOpen}
+          />
+          <SidebarItem
             to="/cashier/bills"
             icon={<FileText size={22} />}
             label="Hóa đơn"
