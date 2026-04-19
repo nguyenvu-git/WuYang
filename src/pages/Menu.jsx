@@ -32,8 +32,8 @@ const Menu = () => {
     const loadData = async () => {
       try {
         const [catRes, prodRes] = await Promise.all([
-          fetch("http://localhost:8088/hadilaoPHP/api/fetch_categories.php"),
-          fetch("http://localhost:8088/hadilaoPHP/api/menu.php"),
+          fetch("https://wuyang.xo.je/api/fetch_categories.php"),
+          fetch("https://wuyang.xo.je/api/menu.php"),
         ]);
 
         if (!catRes.ok || !prodRes.ok) throw new Error("Lỗi kết nối server");

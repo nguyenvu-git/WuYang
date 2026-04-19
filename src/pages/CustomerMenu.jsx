@@ -56,7 +56,7 @@ const CustomerMenu = () => {
     const loadData = async () => {
       try {
         const [catRes, rawMenuData] = await Promise.all([
-          fetch("http://localhost:8088/hadilaoPHP/api/fetch_categories.php").then((r) => r.json()),
+          fetch("https://wuyang.xo.je/api/fetch_categories.php").then((r) => r.json()),
           customerApi.getMenu(),
         ]);
         const allProducts = rawMenuData.flatMap((category) =>
@@ -216,7 +216,7 @@ const CustomerMenu = () => {
       setCheckoutPreview(data);
       setShowCheckoutModal(true);
       setShowMobileCart(false);
-      fetch("http://localhost:8088/hadilaoPHP/api/checkout_request.php", {
+      fetch("https://wuyang.xo.je/api/checkout_request.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ table_id: tableId, token }),

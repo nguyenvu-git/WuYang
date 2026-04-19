@@ -25,7 +25,7 @@ const SignInPage = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:8088/hadilaoPHP/api/login.php",
+        "https://wuyang.xo.je/api/login.php",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

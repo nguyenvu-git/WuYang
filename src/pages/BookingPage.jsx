@@ -61,7 +61,7 @@ const BookingPageContent = () => {
     e.preventDefault();
     try {
       setSubmitting(true);
-      const res = await fetch("http://localhost:8088/hadilaoPHP/api/booking_create.php", {
+      const res = await fetch("https://wuyang.xo.je/api/booking_create.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

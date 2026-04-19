@@ -92,7 +92,7 @@ const AdminMenu = () => {
 
     try {
       // Use the absolute URL for the PHP upload script
-      const response = await fetch("http://localhost:8088/hadilaoPHP/api/upload_image.php", {
+      const response = await fetch("https://wuyang.xo.je/api/upload_image.php", {
         method: "POST",
         body: formDataUpload,
       });
@@ -130,7 +130,7 @@ const AdminMenu = () => {
           IsAvailable: formData.IsAvailable
         });
         
-        await fetch("http://localhost:8088/hadilaoPHP/api/admin_menu_crud.php", {
+        await fetch("https://wuyang.xo.je/api/admin_menu_crud.php", {
           method: "PUT",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: params.toString()
@@ -168,7 +168,7 @@ const AdminMenu = () => {
     
     try {
       const params = new URLSearchParams({ ProductID: productId });
-      await fetch("http://localhost:8088/hadilaoPHP/api/admin_menu_crud.php", {
+      await fetch("https://wuyang.xo.je/api/admin_menu_crud.php", {
         method: "DELETE",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: params.toString()

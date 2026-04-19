@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:8088/hadilaoPHP/api";
+const BASE_URL = "https://wuyang.xo.je/api";
 
 export const request = async (endpoint, options = {}) => {
   const { body, ...customConfig } = options;

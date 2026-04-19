@@ -28,7 +28,7 @@ const TableManagement = () => {
   const fetchTables = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8088/hadilaoPHP/api/tables_map.php",
+        "https://wuyang.xo.je/api/tables_map.php",
       );
       const data = await response.json();
       setTables(Array.isArray(data) ? data : []);
@@ -50,7 +50,7 @@ const TableManagement = () => {
     try {
       setProcessingTableId(tableId);
       const response = await fetch(
-        `http://localhost:8088/hadilaoPHP/api/tables_open.php?id=${tableId}`,
+        `https://wuyang.xo.je/api/tables_open.php?id=${tableId}`,
         {
           method: "POST",
         },
@@ -90,7 +90,7 @@ const TableManagement = () => {
     try {
       setProcessingTableId(tableId);
       const response = await fetch(
-        `http://localhost:8088/hadilaoPHP/api/tables_checkout.php?id=${tableId}`,
+        `https://wuyang.xo.je/api/tables_checkout.php?id=${tableId}`,
         { method: "GET" },
       );
       const data = await response.json();
@@ -113,7 +113,7 @@ const TableManagement = () => {
     try {
       setProcessingTableId(tableId);
       const response = await fetch(
-        `http://localhost:8088/hadilaoPHP/api/tables_update_status.php?id=${tableId}&status=0`,
+        `https://wuyang.xo.je/api/tables_update_status.php?id=${tableId}&status=0`,
         { method: "GET" },
       );
       const data = await response.json();

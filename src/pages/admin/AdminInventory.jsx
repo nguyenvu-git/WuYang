@@ -145,7 +145,7 @@ const AdminInventory = () => {
     if (!ok) return;
     try {
       const params = new URLSearchParams({ ProductID: productId, IngredientID: ingredientId });
-      await fetch("http://localhost:8088/hadilaoPHP/api/admin_recipe_management.php", {
+      await fetch("https://wuyang.xo.je/api/admin_recipe_management.php", {
         method: "DELETE",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: params.toString()
